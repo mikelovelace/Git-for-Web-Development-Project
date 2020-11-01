@@ -57,7 +57,7 @@ https://codepen.io/mikelovelace/pen/MWeVybZ
    	you select the element by typing out the element name followed by two curly brackets which hold the attributes and values for the element. I.E. h2 {color: red; text-transform:uppercase}
     
     19. What is the difference between a class and an id? - Give me an example of when I might use each one
-    	an id is unique in the sense that no other element can have the same ID name. A class is not unique and many elements can share the same class name. A class might be used on several specific elements which all share the same CSS styles. An ID would be used on an element which will never share styles with any other element.
+    	an id is unique in the sense that no other element can have the same ID name. A class is not unique and many elements can share the same class name. A class would be used on elements that appear more than once such as sections and parapgraphs and an id would be used on elements that only appear once such as header and footer
     
     20. How do we select classes in CSS?
     	You select a class by refering to the class name applied to an html element and putting a period in front of it. .classname
