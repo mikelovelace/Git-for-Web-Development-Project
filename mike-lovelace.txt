@@ -1,0 +1,180 @@
+https://codepen.io/mikelovelace/pen/MWeVybZ
+
+
+
+    1. What is Semantic HTML? 
+       Semantic html is the use of html tags which are semantically correct in order to give meaning. I.E <div> is not semantic because there is no meaning to it. It is generic and can contain anything as opposed to <section> which does have meaning and tells the reader that the block of code is the beginning of a new section on the website.
+    
+    2. What is HTML used for? 
+       Html is used to create elements on a website.
+    
+    3. What is an attribute and where do we put it? 
+       Attributes are paired with html elements and are there to hold specific values.
+    
+    4. What is the h1 tag used for? How many times should I use it on a page?
+       h1 tags are used to create the most important header title on a webpage. Technically, there should only be 1 per page.
+    
+    5. Name two tags that have required attributes
+       input, select
+    
+    6. What do we put in the head of our HTML document? 
+       title, style, link, meta tags, things which arent shown on the webpage. 
+    
+    7. What is an id? 
+       id is a unique name given to a an html element using id="". It is used to select a specific unique element.
+    
+    8. What elements can I add an id to? 
+       you can add an id to any html element
+    
+    9. How many times can I use the same id on a page? 
+       once
+    
+    10. What is a class? 
+    	a class is a name which can be given to an html element which can later be referenced in css to add customization to the html element.
+    
+    11. What elements can I add a class to? 
+    	you can add a class to any html element
+    
+    12. How many times can I use the same class on a page? 
+    	infinite
+    
+    13. How do I get my link to open in a new tab?
+    	target="_blank"
+    
+    14. What is the alt attribute in the image tag used for? 
+    	the alt tag is used to give a description of the image incase the image shouldn't load properly. It is also used for screen readers.
+    
+    15. How do I reference an id?
+    	by putting a hash in front of the id name #idname
+    
+    16. What is the difference between a section and a div
+    	a section is a semantic tag and a div is not.
+    
+    17. What is CSS used for? 
+   	CSS, which is short for cascading style sheets, is used to stylize elements on a webpage.
+    
+    18. How to we select an element? Example - every h2 on the page
+   	you select the element by typing out the element name followed by two curly brackets which hold the attributes and values for the element. I.E. h2 {color: red; text-transform:uppercase}
+    
+    19. What is the difference between a class and an id? - Give me an example of when I might use each one
+    	an id is unique in the sense that no other element can have the same ID name. A class is not unique and many elements can share the same class name. A class would be used on elements that appear more than once such as sections and parapgraphs and an id would be used on elements that only appear once such as header and footer
+    
+    20. How do we select classes in CSS?
+    	You select a class by refering to the class name applied to an html element and putting a period in front of it. .classname
+    
+    21. How do we select a p element with a single class of “human””?
+    	p.human
+    
+    22. What is a parent child selector? When would this be useful? 
+        A parent child selector selects every direct child of specified parent. It would be useful when there are multiple parents of the same type holding the same type of children but only wanting to select one set of children who is a direct child of its parent.
+        
+	<div class="row">
+	  <div>
+	  <h2>Header 1</h2>
+	  <p>This is some paragraph text that will not be styled</p>
+	  </div>
+	</div>
+
+	<div class="row">
+	  <div>
+	  <h2>Header 2</h2>
+	  <p>This is some paragraph text that will not be styled</p>
+	  </div>
+	</div>
+	    
+	<div class="row">
+	  <h2>Header 3</h2>
+	  <p>This is some more paragraph text that will be stylized because the p tag is a direct child 	     of .row as opposed to the other p tags which are NOT direct children to .row but are instead 		     direct children to div
+	  </p>  
+	</div>
+	
+	
+	this css code would only style the 3rd paragraph tag because it is a direct child of .row
+	
+	.row > p {
+  		 background: orange;
+		 }
+	
+	
+	
+	this css code would style every paragraph because they reside in a .row class but they don't have
+	to be a direct child
+	
+	.row p {
+		background: orange;
+	       }
+
+    
+    23. How do you select all links within a div with the class of sidebar?
+   	.sidebar a
+    
+    24. What is a pseudo selector?
+   	psudo selecters are used to define a specific state of an element. I.E a:hover
+    
+    25. What do we use to change the spacing between lines?
+   	line-height
+    
+    26. What do we use to change the spacing between letters?
+    	leter-spacing
+    
+    27. What do we use to to change everything to CAPITALS? lowercase? Capitalize?
+   	text-transform: uppercase; 
+    	text-transform: lowercase;
+    	text-transform: capitalize;
+    
+    28. How do I add a 1px border around my div that is dotted and black?
+    	border: { 1px dotted black; }
+    
+    29. How do I select everything on the page? 
+    	use an asterisk * ... it is called a universal selector
+    
+    30. How do I write a comment in CSS?
+    	/** comment here **/
+    
+    31. How do I find out what file I am in, when I am using the command line? 
+        pwd
+    
+    32. Using the command line - how do I see a list of files/folders in my current folder?
+        ls
+    
+    33. How do I remove a file via the command line? Why do I have to be careful with this?
+    	rm filename.ext removes a file but it can be dangerous because it is not easy to recover a deleted file using rm. rm also doesn't give any prompts when deleting a file unless a switch is added to it. rm -i
+    
+    34. Why should I use version control? 
+    	We use version control so incase a disaster should happen to our project, it can be recovered to a previous version. It also allows collaberation between multiple people working on the same project and pushing only those changes which fit the criteria and don't produce any bugs.
+    
+    35. How often should I commit to github?
+    	all day long
+    
+    36. What is the command we would use to push our repo up to github? 
+    	git push -u origin firstname-lastname
+    
+    37. Walk me through Lambda's git flow. 
+    	step1. fork project from github repo
+    	step2. add TL as collaberator
+    	step3. clone project to local directory
+    	step4. git checkout -b firstname-lastname
+    	step5. make changes in project
+    	step6. git add .
+    	step7. git commit -m "commit message"
+    	step8. git push -u origin firstname-lastname
+    	step9. create pull request on your forked repo on github.com
+
+Stretch Questions
+
+    1. What is the difference between an inline element and a block element?
+       An inline remains on a single line and takes up only the space it needs, where as a block element creates a new line and takes up the full width.
+    
+    2. What happens when an element is positioned absolutely? 
+       When an element is positioned absolute, its parent container becomes the browser itself. Its position ignores the normal flow of the document. If the absolute positioned element is nested inside a relative positioned element, then the relative positioned element becomes the absolute positoned elements parent.
+    
+    3. How do I make an element take up only the amount of space it needs but also have the ability to give it a width? 
+       display: inline-block;
+    
+    4. Name 3 elements that are diplay block by default, 2 elements that are display inline by default and 1 element that is display inline-block by default
+       Block - Div, h1, p
+       Inline - a, span
+       Inline-Block - img
+    
+    5. In your own words, explain the box model. What is the "fix" for the box model, in other words, how do we make all elements respect the width we've given them? 
+       The box model contains 4 parts and refers to the margin, border, and padding which  surrounds the 4th part-- the content. Web browsers add default margins, padding, and borders which can make styling html elements more difficult. The fix for this is to use box-sizing: border-box;
